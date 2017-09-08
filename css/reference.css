@@ -1,0 +1,126 @@
+/***************************
+Target elements with ID's or classes
+***************************/
+
+.class { /* Do something */ }
+#id { /* Do something */ }
+
+/* You can use the default class names in your SVG code, or rename them to something more readable
+If you're not sure which element is which, use your browser's web inspector */
+
+
+/***************************
+Basic animation that plays automatically
+***************************/
+
+.something {
+  animation: name 1s;
+}
+
+@keyframes name {
+  from { /* Some CSS property */}
+  to { /* Change value of CSS property */}
+}
+
+/***************************
+Additional animation properties
+***************************/
+.something {
+  animation: name 1s alternate; /* 'alternate' makes the animation play forwards and backwards */
+  transform-origin: center; /* Set the origin point for any transform operation — useful for making scaling happen evenly */
+}
+
+/* There are more properties you can plug into this too: https://css-tricks.com/almanac/properties/a/animation/ */
+
+/***************************
+Additional keyframes
+***************************/
+.something {
+  animation: name 1s;
+}
+
+@keyframes name {
+  0% { /* Some CSS property */}
+  50% { /* Change value of CSS property */}
+100% { /* Change value of CSS property again */}
+}
+
+/***************************
+Fun CSS properties to animate
+***************************/
+.something {
+  transform: scale(1); /* Default scale */
+  transform: scale(2); /* Twice as big */
+  transform: rotate(12deg); /* Rotate; accepts positive or negative numbers */
+  transform: translateX(100px); /* Move horizontally */
+  transform: translateY(-100px); /* Move vertically */
+  transform: translate(20px, 50px); /* Move horizontally and vertically */
+  transform: translate(0, 0); /* Default position */
+  opacity: 0.5; /* Accepts values of 0 (transparent) to 1 (opaque) */
+  color: #ffa2d6; /* Text color */
+  background: #ffa2d6; /* Background color */
+  fill: #ffa2d6; /* Applies fill color to SVG's. You must delete any contradicting statements in the HTML */
+  border: 1px solid #ffa2d6; /* Adds a border to any element. The properties are: border-width, type, color (type could also be 'dashed')*/
+
+  /* There are many, many, more CSS properties... */
+}
+
+/***************************
+Hover effects
+***************************/
+
+.something:hover { /* Apply CSS only when cursor is over element with class 'something' */}
+
+/* Create a transition between states by adding this to the main element;
+'all' ensures that any CSS value will be affected, the number controls the duration */
+.something {transition: all 1s; }
+
+/*  For clickable things: Force the cursor to change */
+.something {cursor: pointer;}
+
+/***************************
+Images
+***************************/
+img {
+  width: 400px; /* Set size of an image to overide it's actual size */
+  width: 100%; /* Image will fill the width of it's container */
+  height: auto; /* The default value, maintains original aspect ratio when you reisze using width */
+}
+
+
+/***************************
+Overlays + Show & hide with Jquery
+***************************/
+.pop-up {
+  /* Position in center of screen.
+  You could create overlays even if you're not animating them with Jquery.
+  Adjust top, bottom, left, right to position anywhere on the screen. */
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Hide when page first loads */
+  visibility: hidden;
+  /* Set size and color etc. */
+  width: 200px;
+  height: 200px;
+  background: white;
+  /* Add a drop shadow */
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.6);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.6);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.6);
+}
+
+/* When the class 'active' is added... */
+.pop-up.active {
+  visibility: visible;
+}
+
+/* Positions X button for closing the pop-up */
+.exit {
+  float: right;
+  cursor: pointer;
+  margin: 5px;
+}

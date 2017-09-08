@@ -1,0 +1,18 @@
+/***************************************
+ ******** STYLES FOR YOUR PROJECT ******
+ ***************************************/
+
+ /* BASIC STUFF TO MAKE YOUR LIFE EASIER */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+img {width: 100%; height: auto;}
+
+body {font-family: sans-serif;}
+
+
+/* BEGIN YOUR STYLES HERE */
