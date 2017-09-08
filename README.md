@@ -1,3 +1,5 @@
+# Interactive Mapping
+
 *Click the green 'Clone or Download' button and select 'Download ZIP'*
 
 ## Contents:
