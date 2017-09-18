@@ -73,6 +73,7 @@ img {width: 100%;}
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.6);
 }
 
+
 /* When 'active' class is added...
 You could also toggle CSS transform properties when an element is clicked! */
 .pop-up.active {
@@ -84,4 +85,8 @@ You could also toggle CSS transform properties when an element is clicked! */
   float: right;
   cursor: pointer;
   margin: 5px;
+}
+
+.two-pangolins img{
+  width: 45%;
 }
